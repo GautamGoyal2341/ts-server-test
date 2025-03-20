@@ -2,6 +2,7 @@ import express from "express";
 
 const app = express();
 const PORT = 8080;
+console.log("debug");
 
 app.get("/", (req, res) => {
   res.send("This is Home Page");
