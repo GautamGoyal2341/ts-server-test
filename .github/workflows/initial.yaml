@@ -1,0 +1,27 @@
+name: TS of Project
+
+on:
+  pull_request:
+    branches:
+      - master
+      - main
+
+jobs:
+  build:
+    name: Build NodeJs Application
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checking Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run TypeScript compiler
+        run: npm run build
