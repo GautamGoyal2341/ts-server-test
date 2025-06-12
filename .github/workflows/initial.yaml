@@ -38,6 +38,8 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/ts-server:latest
 
+
+
           
 
         # Deploy to EC2 via SSH
